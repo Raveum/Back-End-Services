@@ -55,7 +55,6 @@ router.post('/', async (req, res) => {
  */
 router.patch('/:id', getApplicant, async (req, res) => {
   const updates = req.body;
-  // Dynamically update applicant fields if provided in request
   Object.keys(updates).forEach((key) => {
     res.applicant[key] = updates[key];
   });

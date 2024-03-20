@@ -28,8 +28,12 @@ mongoose.connect(DATABASE_URL).then(() => {
 app.use(express.json());
 
 // Import and use routes for waitlist applicants
-const waitlistApplicantsRouter = require('./routes/waitlistApplicants');
+const waitlistApplicantsRouter = require('./routes/waitlistApplicant');
 app.use('/waitlist_applicants', waitlistApplicantsRouter);
+
+// Import and use routes for posts
+const postsRouter = require('./routes/posts');
+app.use('/posts', postsRouter);
 
 // Global error handling middleware for catching and responding to unhandled exceptions within the application
 app.use((err, req, res, next) => {

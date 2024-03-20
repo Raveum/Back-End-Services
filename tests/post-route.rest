@@ -1,0 +1,37 @@
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "My First Post",
+  "subHeading": "An Introduction",
+  "author": "John Doe",
+  "primaryImage": "http://example.com/image1.jpg",
+  "secondaryImage": "http://example.com/image2.jpg",
+  "tertiaryImage": "http://example.com/image3.jpg",
+  "tags": ["Intro", "Beginner", "Welcome"],
+  "prePara": ["This is the first pre-paragraph.", "This is the second pre-paragraph."],
+  "postPara": ["This is the first post-paragraph.", "This is the second post-paragraph."],
+  "minuteRead": 5
+}
+
+###
+
+GET http://localhost:3000/posts
+
+###
+
+GET http://localhost:3000/posts/65fb48cdf784eff43bb97546
+
+###
+
+PATCH http://localhost:3000/posts/65fb48cdf784eff43bb97546
+Content-Type: application/json
+
+{
+  "subHeading": "Updated Sub Heading",
+  "minuteRead": 10
+}
+
+###
+
+DELETE http://localhost:3000/posts/65fb48cdf784eff43bb97546
