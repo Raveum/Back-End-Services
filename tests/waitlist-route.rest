@@ -1,0 +1,37 @@
+GET http://localhost:3000/waitlist_applicants
+
+###
+
+GET http://localhost:3000/waitlist_applicants/65fb4263f6f7e8e25e04001a
+
+###
+
+POST http://localhost:3000/waitlist_applicants
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "age": 30,
+  "phoneNumber": "1234567890",
+  "potentialBudget": 50000,
+  "timelineToInvest": 6,
+  "brokerCode": "XYZ123"
+}
+
+###
+
+PATCH http://localhost:3000/waitlist_applicants/65fb4263f6f7e8e25e04001a
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Doe",
+  "phoneNumber": "0987654321"
+}
+
+###
+
+DELETE http://localhost:3000/waitlist_applicants/65fb4263f6f7e8e25e04001a
+
