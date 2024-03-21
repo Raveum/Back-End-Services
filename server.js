@@ -35,6 +35,11 @@ app.use('/waitlist_applicants', waitlistApplicantsRouter);
 const postsRouter = require('./routes/posts');
 app.use('/posts', postsRouter);
 
+// Import and use routes for properties
+const propertyRouter = require('./routes/properties');
+app.use('/property', propertyRouter);
+
+
 // Global error handling middleware for catching and responding to unhandled exceptions within the application
 app.use((err, req, res, next) => {
   console.error('Global error handler:', err.stack);

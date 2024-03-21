@@ -1,0 +1,30 @@
+POST http://localhost:3000/property
+Content-Type: application/json
+
+{
+  "propertyName": "Sunny Apartment",
+  "address": "123 Sunshine St, Pleasantville",
+  "price": 300000,
+  "capRate": 5.2,
+  "sharesAvailable": 100,
+  "rentalYield": 3.8,
+  "image": "http://example.com/image.jpg"
+}
+
+###
+
+GET http://localhost:3000/property
+
+###
+
+GET http://localhost:3000/property/65fb791d389faf0656bdd52b
+
+###
+
+PATCH http://localhost:3000/property/65fb791d389faf0656bdd52b
+Content-Type: application/json
+
+{
+  "price": 310000,
+  "sharesAvailable": 95
+}
